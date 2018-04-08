@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iNc-tK-UT2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="VFW-hb-Af3">
+            <objects>
+                <collectionViewController id="iNc-tK-UT2" customClass="CollectionViewController" customModule="CircularCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gMA-GS-wZm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewLayout key="collectionViewLayout" id="0X1-1k-ayk" customClass="CircularCollectionViewLayout" customModule="CircularCollectionView" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="Cab-75-c73" customClass="CardCell" customModule="CircularCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SFL-Zn-YEl">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="SFL-Zn-YEl" firstAttribute="leading" secondItem="Cab-75-c73" secondAttribute="leading" id="Gtg-ir-7BZ"/>
+                                    <constraint firstItem="SFL-Zn-YEl" firstAttribute="top" secondItem="Cab-75-c73" secondAttribute="top" id="RRF-ih-aT0"/>
+                                    <constraint firstAttribute="trailing" secondItem="SFL-Zn-YEl" secondAttribute="trailing" id="bRE-mz-Ybk"/>
+                                    <constraint firstAttribute="bottom" secondItem="SFL-Zn-YEl" secondAttribute="bottom" id="i33-Vb-J1h"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardImage" destination="SFL-Zn-YEl" id="Nlj-S0-aWK"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iNc-tK-UT2" id="X20-Nt-1If"/>
+                            <outlet property="delegate" destination="iNc-tK-UT2" id="uKk-F3-rGr"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPp-oH-fDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="449"/>
+        </scene>
+    </scenes>
+</document>
